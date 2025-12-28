@@ -149,15 +149,16 @@ The diagram below illustrates the flow of data through the engine:
 ## Engine Architecture
 
 ```mermaid
-    T[Template File<br/>(Template String)]
+flowchart TD
+    T[Template File]
     P[Parser]
     G[HTML Generator]
     O[HTML Output File]
-    C[Structured Data<br/>(Context)]
-   ```
+    C[Structured Data]
 
     T --> P
     P -->|Parsed Template| G
     C --> G
     G --> O
+
 
